@@ -1,0 +1,58 @@
+// Breakpoints
+$mobile:        320px; // Mobile begins here
+$mobileSmall:   360px;
+$mobileSmallInt:400px;
+$mobileMedium:  480px;
+$mobileLarge:   575px;
+$mobileLargest: 640px;
+$tablet:        768px; // Tablet begins here
+$desktop:       1024px;
+$desktopMedium: 1080px;
+$desktopInt:    1280px;
+$desktopLarge:  1440px;
+$desktopLarger: 1600px;
+$desktopHuge:   1800px; // Outlier
+
+
+// Media Query Mixins
+@mixin MQ($canvas) {
+  @if $canvas == mobile {
+   @media only screen and (min-width: $mobile) { @content; }
+  }
+  @if $canvas == mobileSmall {
+   @media only screen and (min-width: $mobileSmall) { @content; }
+  }
+  @if $canvas == mobileSmallInt {
+   @media only screen and (min-width: $mobileSmallInt) { @content; }
+  }
+  @if $canvas == mobileMedium {
+   @media only screen and (min-width: $mobileMedium) { @content; }
+  }
+  @else if $canvas == mobileLarge {
+   @media only screen and (min-width: $mobileLarge) { @content; }
+  }
+  @else if $canvas == mobileLargest {
+   @media only screen and (min-width: $mobileLargest) { @content; }
+  }
+  @else if $canvas == tablet {
+   @media only screen and (min-width: $tablet) { @content; }
+  }
+  @else if $canvas == desktop {
+   @media only screen and (min-width: $desktop) { @content; }
+  }
+  @else if $canvas == desktopMedium {
+   @media only screen and (min-width: $desktopMedium) { @content; }
+  }
+  @else if $canvas == desktopInt {
+   @media only screen and (min-width: $desktopInt) { @content; }
+  }
+  @else if $canvas == desktopLarge {
+   @media only screen and (min-width: $desktopLarge) { @content; }
+  }
+  @else if $canvas == desktopLarger {
+   @media only screen and (min-width: $desktopLarger) { @content; }
+  }
+  @else if $canvas == desktopHuge {
+   @media only screen and (min-width: $desktopHuge) { @content; }
+  }
+}

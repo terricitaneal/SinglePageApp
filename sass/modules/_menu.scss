@@ -1,0 +1,804 @@
+.header {
+	background-image: url('http://static.tumblr.com/niurgpz/LYAns7sxm/bg-menu.png');
+	height: 63px;
+	position: fixed;
+	width: 100%;
+	z-index: 101;
+
+  @include MQ(desktop) {
+    height: 100%;
+    margin-left: 2%;
+    //width: 175px;
+    width: 15%;
+  }
+
+  @include MQ(desktopLarge) {
+    //width: 250px;
+  }
+
+  .header-container {
+    display: block;
+    //left: 50%;
+    //margin-left: -160px;
+    position: relative;
+    width: 100%;
+    z-index: 102;
+
+    @include MQ(desktop) {
+      position: static;
+    }
+  }
+
+  .logo {
+    float: left;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 1000;
+
+    @include MQ(mobileSmall) {
+      margin-top: 10px;
+    }
+
+    @include MQ(desktop) {
+      //left: 50%;
+      //margin-left: -72px;
+      //margin-top: -110px;
+      //top: 100%;
+      display: none;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      top: 100%;
+      margin-top: -315px;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    @include MQ(desktopInt) {
+      margin-top: -352px;
+    }
+
+    @include MQ(desktopLarge) {
+      margin-top: -360px;
+    }
+
+    @include MQ(desktopHuge) {
+      margin-top: -430px;
+    }
+
+    img {
+      height: auto;
+      padding-top: 20px;
+      width: 80px;
+
+      @include MQ(mobileSmall) {
+        padding-top: 10px;
+        width: 90px;
+      }
+
+      @include MQ(desktop) {
+        //width: 145px;
+        width: 75%;
+      }
+    }
+  }
+
+  .logo-smyc {
+    float: left;
+    position: absolute;
+    margin-left: 20px;
+    width: 100%;
+
+    @include MQ(desktop) {
+      float: none;
+      margin-bottom: 55px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      text-align: center;
+    }
+
+    @include MQ(desktopInt) {
+      margin-bottom: 75px;
+    }
+
+    img {
+      height: auto;
+      padding-top: 8px;
+      width: 85px;
+
+      @include MQ(mobileSmall) {
+        width: 95px;
+      }
+
+      @include MQ(desktop) {
+        padding-top: 75px;
+        width: 75%;
+      }
+    }
+  }
+
+  .menu {
+    display: block;
+    float: right;
+    padding-top: 10px;
+    position: relative;
+
+    @include MQ(desktop) {
+      display: none;
+    }
+  }
+
+}
+
+// Menu Content
+
+.menu-content {
+  background-color: $black;
+  background-image: url('http://static.tumblr.com/niurgpz/LYAns7sxm/bg-menu.png');
+  display: none;
+  height: 100%;
+  opacity: 0.9;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  @include MQ(desktop) {
+    background-color: transparent;
+    background-image: none;
+    display: block;
+    opacity: 1;
+    overflow: visible;
+    position: relative;
+    width: auto;
+    z-index: 101;
+  }
+
+  &.opened {
+    display: block;
+    overflow-y: auto;
+
+    @include MQ(desktop) {
+      overflow: hidden;
+    }
+  }
+
+  ul.nav {
+    list-style-type: none;
+    margin-bottom: 100px;
+    position: relative;
+    top: 85px;
+
+    @include MQ(mobileSmall) {
+      margin-bottom: 150px;
+      top: 115px;
+    }
+
+    @include MQ(mobileSmallInt) {
+      margin-bottom: 160px;
+      top: 135px;
+    }
+
+    @include MQ(desktop) {
+      margin-bottom: 0;
+      top: 0;
+    }
+
+    li a {
+      color: $gray;
+      display: block;
+      @include helveticaBold;
+      @include font-size(13px);
+      margin-bottom: 20px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include MQ(mobileSmall) {
+        margin-bottom: 40px;
+      }
+
+      @include MQ(mobileSmallInt) {
+        margin-bottom: 50px;
+      }
+
+      @include MQ(desktop) {
+        @include font-size(10px);
+      }
+
+      &.active {
+        color: $white;
+      }
+
+      &:hover {
+        @include MQ(desktop) {
+          color: $white;
+        }
+      }
+    }
+  }
+
+   .intro {
+    //border: 1px solid red;
+    display: block !important;
+    height: 82px;
+    left: 21px;
+    position: absolute;
+    top: 150px;
+    width: 28%;
+
+    @include MQ(desktop) {
+      display: block !important;
+      left: 21px;
+      top: -155px;
+      width: 75%;
+    }
+  }
+
+  /*.icon-nyc,
+  .icon-london {
+
+    @include MQ(desktop) {
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }*/
+
+  /*.icon-nuc {
+    @include MQ(desktop) {
+      background-image: url('');
+      height: 85px;
+      margin-bottom: 50px;
+      width: 72px;
+    }
+
+    &:hover,
+    &.active {
+      @include MQ(desktop) {
+        background-position: 0 -83px;
+      }
+    }
+
+    a {
+       @include MQ(desktop) {
+        display: block;
+        left: 100%;
+        margin-left: -108px;
+        padding: 40px 0 35px 0;
+        position: relative;
+        width: 145px;
+      }
+    }
+  }*/
+
+  /*.icon-london {
+    @include MQ(desktop) {
+      background-image: url('../images/icon-london.png');
+      height: 33px;
+      width: 65px;
+    }
+
+     &:hover,
+     &.active {
+      @include MQ(desktop) {
+        background-position: -1px -33px;
+      }
+    }
+
+    a {
+      @include MQ(desktop) {
+        left: 100%;
+        margin-left: -76px;
+        margin-top: 0;
+        padding: 48px 0 25px 0;
+        position: relative;
+        width: 78px;
+      }
+    }
+  }*/
+
+  .more-looks {
+    position: relative;
+    margin-bottom: 15px;
+
+    @include MQ(mobileSmall) {
+      margin-bottom: 25px;
+    }
+
+    @include MQ(mobileSmall) {
+      margin-bottom: 25px;
+    }
+
+    @include MQ(desktop) {
+      display: none;
+    }
+
+    .divider {
+      img {
+        width: 75%;
+
+        @include MQ(mobileSmallInt) {
+          width: 75%;
+        }
+
+        @include MQ(mobileLargest) {
+          width: auto;
+        }
+      }
+    }
+
+    .more-looks-text {
+      img {
+        height: auto;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        width: 150px;
+
+        @include MQ(mobileLargest) {
+          width: 196px;
+        }
+      }
+    }
+  }
+
+
+  .social-share {
+    position: relative;
+
+    @include MQ(desktop) {
+      display: block;
+      left: 50%;
+      margin-left: -50%;
+      margin-top: -330px;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+    }
+
+    @include MQ(desktopInt) {
+      margin-top: -370px;
+    }
+
+    @include MQ(desktopLarge) {
+      margin-top: -380px;
+    }
+
+    @include MQ(desktopHuge) {
+      margin-top: -450px;
+    }
+
+    .share {
+      @include helveticaRegular;
+      @include font-size(14px);
+      letter-spacing: 0.3em;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+
+      @include MQ(desktop) {
+        display: none;
+      }
+
+      a {
+        color: $white;
+        display: block;
+        padding-bottom: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.faux-intro-btn {
+  float: left;
+  left: 50%;
+  margin-left: -55px;
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+  width: 110px;
+
+  @include MQ(desktop) {
+    margin-left: -66px;
+    top: 67px;
+    width: 400px;
+  }
+}
+
+.faux-intro-btn .intro {
+  display: block;
+  height: 63px;
+  width: 110px;
+
+  @include MQ(desktop) {
+    background-image: url('http://static.tumblr.com/niurgpz/rDFnsyact/bg-transparent.png'); // Fix for IE10/11
+    background-repeat: repeat;
+    height: 82px;
+    position: absolute;
+    width: 135px;
+  }
+}
+
+.menu-saber-highlight {
+  display: none;
+
+  @include MQ(desktop) {
+    display: block;
+    //margin-top: -740px;
+    position: relative;
+    //top: 100%;
+    top: 0;
+
+    @include MQ(desktopMedium) {
+      //margin-top: -1106px;
+    }
+  }
+
+  img {
+    @include MQ(desktop) {
+      bottom: 0;
+      //height: 100%;
+      //left: 122px;
+      left: 57%;
+      position: absolute;
+      //top: 100%;
+      //width: 100%;
+      width: 100%;
+    }
+
+    @include MQ(desktopLarge) {
+      width: 75%;
+      left: 66%;
+    }
+  }
+}
+
+// Mobile & Nav Social Icons
+.social-icons {
+  display: block;
+  left: 50%;
+  margin-left: -130px;
+  position: relative;
+  width: 100%;
+
+  @include MQ(desktop) {
+    margin-left: -82px;
+  }
+
+   @include MQ(desktopLarge) {
+    margin-left: -92px;
+  }
+
+  a {
+    background-image: url('http://static.tumblr.com/niurgpz/ukNnsl68y/icons-mobile-social.png');
+    @include image-2x('http://static.tumblr.com/niurgpz/AOxnsl69l/icons-mobile-social2x.png', 250px, auto);
+    background-repeat: no-repeat;
+    float: left;
+    height: 40px;
+    width: 50px;
+
+
+    @include MQ(desktop) {
+      background-image: url('http://static.tumblr.com/niurgpz/oqtnt0wxj/icons-social.png');
+      @include image-2x('http://static.tumblr.com/niurgpz/oqtnt0wxj/icons-social.png', 210px, auto);
+      //width: 35px;
+      width: 30px;
+    }
+
+    @include MQ(desktopLarge) {
+      width: 40px;
+    }
+
+    @include MQ(desktopHuge) {
+      background-position: 0 0;
+    }
+  }
+
+  .fb {
+    background-position: 0 0;
+
+    @include MQ(desktop) {
+      background-position: 15px 0;
+    }
+
+    @include MQ(desktopLarge) {
+      background-position: 0 0;
+    }
+
+    @include MQ(desktopHuge) {
+      //background-position: 0 0;
+    }
+  }
+
+  .tw {
+    background-position: -52px 0;
+
+    @include MQ(desktop) {
+      //background-position: -35px 0;
+      background-position: -40px 0;
+    }
+
+    @include MQ(desktopMedium) {
+      //background-position: -35px 0;
+    }
+
+    @include MQ(desktopLarge) {
+      background-position: -47px 0;
+    }
+
+  }
+
+  .ig {
+    background-position: -102px 0;
+
+    @include MQ(desktop) {
+      background-position: -88px 0;
+    }
+
+    @include MQ(desktopMedium) {
+      //background-position: -85px 0;
+    }
+
+    @include MQ(desktopLarge) {
+      background-position: -88px 0;
+    }
+  }
+
+  .tumblr {
+    background-position: -152px 0;
+
+    @include MQ(desktop) {
+      background-position: -138px 0;
+    }
+  }
+
+  .pinterest {
+    background-position: -200px 0;
+
+    @include MQ(desktop) {
+      background-position: -185px 0;
+    }
+  }
+}
+
+
+// Desktop Social icons
+.desktop-share {
+  display: none;
+
+  @include MQ(desktop) {
+    display: block;
+  }
+
+  ul {
+    @include MQ(desktop) {
+      display: block;
+      float: right;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  ul li {
+    @include MQ(desktop) {
+      float: left;
+      @include helveticaRegular;
+      @include font-size(11px);
+      letter-spacing: 0.2em;
+      margin-left: 10px;
+      margin-right: 5px;
+      position: relative;
+      text-transform: uppercase;
+      z-index: 101;
+    }
+
+    a {
+      @include MQ(desktop) {
+        color: $white;
+        margin-right: 15px;
+        text-decoration: none;
+      }
+
+      &:hover {
+        //opacity: .5;
+      }
+    }
+  }
+}
+
+  // Desktop Social Icons
+
+  .desktop-social-share {
+    @include MQ(desktop) {
+      cursor: pointer;
+    }
+  }
+
+  .desktop-share-links {
+    @include MQ(desktop) {
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  .desktop-share .social-icons {
+    @include MQ(desktop) {
+      display: none;
+      left: 100%;
+      position: absolute;
+      margin-left: -115px;
+      margin-top: 30px;
+      z-index: 100;
+      width: auto;
+    }
+
+    span {
+      @include MQ(desktop) {
+        background-image: url('http://static.tumblr.com/niurgpz/ukNnsl68y/icons-mobile-social.png');
+        @include image-2x('http://static.tumblr.com/niurgpz/AOxnsl69l/icons-mobile-social2x.png', 250px, auto);
+        cursor: pointer;
+        float: left;
+        height: 40px;
+        width: 50px;
+      }
+    }
+
+    .fb {
+      @include MQ(desktop) {
+        background-position: 0 0;
+      }
+
+      @include MQ(desktopHuge) {
+        //background-position: 0 0;
+      }
+    }
+
+    .tw {
+      @include MQ(desktop) {
+        background-position: -50px 0;
+      }
+    }
+
+    /*.ig {
+      @include MQ(desktop) {
+        background-position: -108px 0;
+        width: 40px;
+      }
+    }
+
+    .tumblr {
+      @include MQ(desktop) {
+        background-position: -153px 0;
+      }
+    }
+
+    .pinterest {
+      @include MQ(desktop) {
+        background-position: -200px 0;
+      }
+    }*/
+  }
+//}
+
+.desktop-footer {
+  .logo {
+    display: none;
+
+    @include MQ(desktop) {
+      display: block;
+    }
+  }
+}
+
+// TERMS/PRIVACY
+
+.header-footer {
+  color: $white;
+  display: block;
+  @include helveticaRegular;
+  @include font-size(11px);
+  left: 30%;
+  margin-right: 10px;
+  margin-top: 90px;
+  text-align: center;
+  text-transform: uppercase;
+  top: 100%;
+  width: 100%;
+
+  @include MQ(desktop) {
+    color: $gray;
+    @include font-size(9px);
+    left: 50%;
+    margin-left: -62%;
+    margin-right: 10px;
+    margin-top: -260px;
+    position: absolute;
+    text-align: right;
+  }
+
+  @include MQ(desktopInt) {
+    margin-top: -300px;
+  }
+
+  @include MQ(desktopHuge) {
+    margin-top: -366px;
+  }
+
+  div {
+    margin-bottom: 10px;
+
+    @include MQ(desktop) {
+      margin-bottom: 5px;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    @include MQ(desktop) {
+      color: $gray;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+
+// Class used when the height of the window is < 600px
+.adjustHeight {
+  @include MQ(desktop) {
+    .menu-content ul.nav {
+      top: -35px;
+    }
+
+    .menu-content ul.nav li a {
+      margin-bottom: 25px;
+    }
+
+    .menu-content .social-share {
+      margin-top: -332px;
+    }
+
+    .header .logo {
+      margin-top: -315px;
+    }
+
+    .header .logo-smyc img {
+      //padding-top: 40px;
+    }
+
+    .header-footer {
+      margin-top: -265px;
+    }
+
+    .menu-content .icon-nyc {
+      margin-bottom: 20px;
+    }
+
+    .slide-2 .internal-section {
+      top: 0;
+    }
+  }
+
+  @include MQ(desktopInt) {
+    .menu-content .social-share {
+      margin-top: -375px;
+    }
+
+    .header .logo {
+      margin-top: -357px;
+    }
+
+    .header-footer {
+      margin-top: -300px;
+    }
+
+  }
+}

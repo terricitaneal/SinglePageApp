@@ -1,0 +1,18 @@
+/* COLORS */
+
+$blueBlack: #12121a; //used as background color for the preloader page
+$black: #000;
+$gray: #646464;
+$white: #fff;
+
+/* FONTS */
+@mixin helveticaRegular {
+  font-family: Helvetica;
+  font-weight: normal;
+}
+
+@mixin helveticaBold {
+  font-family: Helvetica;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+}

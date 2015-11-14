@@ -1,0 +1,137 @@
+/* -----------------------------------
+Modules - reusable parts of our design
+-------------------------------------- */
+.site-img-replace {
+  /* Replace text with a background-image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/* -----------------------------------
+Main components
+-------------------------------------- */
+.site-scroll-down {
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 20px;
+  width: 38px;
+  height: 44px;
+}
+
+/* No Touch devices */
+.site-nav-trigger {
+  display: none;
+}
+
+#site-vertical-nav {
+  bottom: auto;
+  color: $white;
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 3;
+
+  @include MQ(desktop) {
+    right: 20px;
+  }
+}
+#site-vertical-nav li {
+  text-align: right;
+}
+#site-vertical-nav a {
+  /* Prevent weird movements on hover when you use a
+     CSS3 transformation - webkit browsers */
+  -webkit-backface-visibility: hidden;
+  color: inherit;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+}
+#site-vertical-nav a span {
+  float: right;
+}
+#site-vertical-nav a:hover .slide-label {
+  opacity: 0;
+
+}
+#site-vertical-nav .slide-dot {
+  //background-color: #cc0000;
+  border: 5px solid $white;
+  border-radius: 100%;
+  //height: 16px;
+  left: -1px;
+  position: relative;
+  /* We set a top value in order to align the dot with the label.
+     If you change label's font, you may need to change this top value */
+  top: 0;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+  transition: transform 0.2s, background-color 0.5s;
+  //width: 16px;
+
+  @include MQ(desktop) {
+    border: 4px solid $white;
+    left: -2px;
+  }
+}
+
+#site-vertical-nav a.active .slide-dot,
+#site-vertical-nav a.clicked .slide-dot {
+  border: 1px solid $white;
+  left: 0;
+  height: 12px;
+  padding: 0;
+  width: 12px;
+}
+
+#site-vertical-nav a.active .active-dot {
+  background-color: $white;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 2px;
+}
+#site-vertical-nav .slide-label {
+  font-size: 12px;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  margin-right: 10px;
+  opacity: 0;
+  padding: 16px 0;
+  text-transform: uppercase;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+ // -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+ // -moz-transition: -moz-transform 0.5s, opacity 0.5s;
+ // transition: transform 0.5s, opacity 0.5s;
+
+ @include MQ(desktop) {
+  padding: 12px 0;
+ }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  #site-vertical-nav {
+    //display: none;
+  }
+}

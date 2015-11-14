@@ -1,0 +1,140 @@
+.slide-moveToTopEasing {
+  -webkit-animation: moveToTop .5s ease-in-out both;
+  animation: moveToTop .5s ease-in-out both;
+}
+.slide-moveToBottomEasing {
+  -webkit-animation: moveToBottom .5s ease-in-out both;
+  animation: moveToBottom .5s ease-in-out both;
+}
+.slide-moveFromBottom {
+  -webkit-animation: moveFromBottom .5s ease both;
+  animation: moveFromBottom .5s ease both;
+}
+
+/*  Going down transitions */
+// outclass
+.slide-moveToTopFade {
+  -webkit-animation: moveToTopFade .5s ease both;
+  animation: moveToTopFade .5s ease both;
+}
+
+// inclass
+.slide-moveFromBottomFade {
+  -webkit-animation: moveFromBottomFade .5s ease both;
+  animation: moveFromBottomFade .5s ease both;
+}
+
+/* Going up transitions */
+// outclass
+.slide-moveToBottomFade {
+  -webkit-animation: moveToBottomFade .5s ease both;
+  animation: moveToBottomFade .5s ease both;
+}
+
+//inclass
+.slide-moveFromTopFade {
+  -webkit-animation: moveFromTopFade .5s ease both;
+  animation: moveFromTopFade .5s ease both;
+}
+
+/********************************* keyframes **************************************/
+
+/* move from / to and fade */
+
+@-webkit-keyframes moveToLeftFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateX(-100%); }
+}
+@keyframes moveToLeftFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveFromLeftFade {
+  from { opacity: 0.1; -webkit-transform: translateX(-100%); }
+}
+@keyframes moveFromLeftFade {
+  from { opacity: 0.1; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes moveToRightFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateX(100%); }
+}
+@keyframes moveToRightFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveFromRightFade {
+  from { opacity: 0.1; -webkit-transform: translateX(100%); }
+}
+@keyframes moveFromRightFade {
+  from { opacity: 0.1; -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@-webkit-keyframes moveToTopFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateY(-100%); }
+}
+@keyframes moveToTopFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTopFade {
+  from { opacity: 0.1; -webkit-transform: translateY(-100%); }
+}
+@keyframes moveFromTopFade {
+  from { opacity: 0.1; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottomFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateY(100%); }
+}
+@keyframes moveToBottomFade {
+  from { }
+  to { opacity: 0.1; -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottomFade {
+  from { opacity: 0.1; -webkit-transform: translateY(100%); }
+}
+@keyframes moveFromBottomFade {
+  from { opacity: 0.1; -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+/* move to with different easing */
+
+@-webkit-keyframes moveToTop {
+  from { }
+  to { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+  from { }
+  to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveFromTop {
+  from { -webkit-transform: translateY(-100%); }
+}
+@keyframes moveFromTop {
+  from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToBottom {
+  from { }
+  to { -webkit-transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+  from { }
+  to { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+  from { -webkit-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+  from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}

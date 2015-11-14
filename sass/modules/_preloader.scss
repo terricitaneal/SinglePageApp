@@ -1,0 +1,196 @@
+#loader-wrapper {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#loader {
+  display: block;
+  height: 200px;
+  left: 50%;
+  margin: -100px 0 0 -145px;
+  position: relative;
+  top: 40%;
+  width: 290px;
+
+  //-webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  //animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+  z-index: 1001;
+}
+
+#loader-wrapper .loader-section {
+  background: $blueBlack;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+  -ms-transform: translateX(0);  /* IE 9 */
+  -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+  width: 100%;
+  //width: 51%;
+  z-index: 1000;
+}
+
+.loaded #loader {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+  visibility: hidden;
+
+  -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateY(-100%);  /* IE 9 */
+  transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+
+/* Images */
+#loader img {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.animated-symbols {
+  height: 88px;
+  width: 84px;
+}
+
+.which-side {
+  height: 38px;
+  width: 289px;
+}
+
+#loader-wrapper {
+  .logo-cg {
+    height: 132px;
+    width: 271x;
+  }
+}
+
+/* Loading Text */
+.loading {
+  color: $white;
+  @include font-size(10px);
+  @include helveticaBold;
+  text-transform: uppercase;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+
+.no-js h1 {
+  color: #222222;
+}
+
+/*#cg-content {
+  margin: 0 auto;
+  max-width: 978px;
+  padding-bottom: 50px;
+  width: 100%;
+
+  @include MQ(desktop) {
+    max-width: 100%;
+  }
+}*/
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-o-min-device-pixel-ratio: 5/4),
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+  * Don't show links for images, or javascript/internal links
+  */
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Show Me Your City...</title>
+
+    <link rel="stylesheet" href="css/screen.css">
+
+    <script src="js/spa-2.0.0.min.js"></script>
+
+    <!-- https://developers.facebook.com/docs/sharing/best-practices -->
+    <meta property="og:title" content="Show Me Your City">
+    <meta property="og:site_name" content="Show Me Your City">
+    <meta property="og:url" content="showmeyourcity.com">
+    <meta property="og:description" content="Show Me your city">
+    <meta property="og:image" content="">
+
+
+  </head>
+
+  <body>
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- PRELOADER -->
+ <div id="loader-wrapper">
+    <div id="loader">
+      <img class="center logo-cg" src="images/smyc.png" border="0" alt="" />
+      <p class="center loading">Welcome...</p>
+    </div>
+
+    <div class="loader-section"></div>
+  </div>
+
+  <!-- MENU -->
+  <div class="header">
+    <div class="header-container">
+
+      
+
+      <div class="logo-smyc">
+          <a href="#nyc"><img src="images/smyc.png" border="0" alt="" /></a>
+      </div>
+
+      <div id="js-mobile-menu" class="menu">
+        <button type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+          <span class="tcon-menu__lines" aria-hidden="true"></span>
+          <span class="tcon-visuallyhidden">toggle menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- LOGO BUTTON CLICK -->
+    <div class="faux-intro-btn">
+      <ul class="nav">
+        <li>
+          <a href="#nyc" class="nyc smyc-logo"></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- NAV ITEMS -->
+    <div id="js-menu-content" class="menu-content">
+
+      <ul class="nav">
+        <li class="icon-nyc"><a class="nyc dark" href="#nyc">NYC</a></li>
+        <li class="icon-london"><a class="london light" href="#london">London</a></li>
+      </ul>
+
+      
+
+      <!-- Wrapper for desktop Footer Elements -->
+      <div class="desktop-footer">
+      <div class="social-share">
+        
+        <div class="social-icons">
+          <a class="fb" href="" target="_blank"></a>
+          <a class="tw" href="" target="_blank"></a>
+          <a class="ig" href="" target="_blank"></a>
+          <a class="tumblr" href="" target="_blank"></a>
+          <a class="pinterest" href="" target="_blank"></a>
+        </div>
+      </div>
+
+     
+
+      <!-- Privacy & Terms -->
+      <div class="header-footer">
+        
+      </div>
+    </div>
+
+      </div>
+
+       <div class="menu-saber-highlight"></div>
+    </div>
+
+  <!-- EMAIL/FOLLOW/SHARE -->
+  <div class="desktop-share">
+    <ul>
+      
+      <li id="js-desktop-social-share" class="desktop-social-share">
+        <span style="z-index: 100; position: relative;">Share</span>
+      </li>
+    </ul>
+
+    <div id="js-social-icons" class="social-icons">
+        <span id="js-fb-share" class="fb"></span>
+        <span id="js-tw-share" class="tw" target="_blank"></span>
+      </div>
+  </div>
+
+  <!-- Page Navigation Dots -->
+  <ul id="site-vertical-nav" class="nav">
+
+      <li class="icon-nyc">
+        <a class="nyc dark" href="#nyc">
+          <span class="slide-dot">
+            <span class="active-dot"></span>
+          </span>
+          <span class="slide-label"><span class="hidden">NYC</span></span>
+        </a>
+      </li>
+
+      <li class="icon-london">
+        <a class="london light" href="#london">
+          <span class="slide-dot">
+            <span class="active-dot"></span>
+          </span>
+          <span class="slide-label"><span class="hidden">London</span></span>
+        </a>
+      </li>
+    </ul>
+
+  <!-- PAGE CONTENT -->
+
+  <div id="cg-content" class="slides-container">
+
+   
+
+    <!-- Sections -->
+
+    <div id="nyc" class="slide-content slide clones slide-1">
+      <!-- Slide Content -->
+    </div>
+
+    <div id="london" class="clones slide-content slide slide-2">
+      <!-- Slide Content -->
+    </div>
+
+
+
+
+    <!-- Character Clones -->
+    <!--<div id="characters">
+    </div>-->
+
+  </div> <!-- end div.content -->
+
+  <!-- Backbone template script for the character posts -->
+  <!--<script id="characterClones" type="text/template">
+
+      <div class="internal-section">
+        <img class="center clones-text" src="<%= nameImg %>" alt="<%= name %>" />
+
+        <div class="copy">
+          <p class="h2"><%= subtext %></p>
+          <p class="desc"><%= description %></p>
+        </div>
+
+        <img src="<%= buttonImg %>" class="btn center" alt="<%= buttonText %>" />
+      </div>
+  </script>-->
+
+
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/underscore-min.js"></script>
+    <script src="js/vendor/backbone-min.js"></script>
+    <!--<script src="js/postApp.js"></script>-->
+    <script src="js/spa-foot-2.0.0.min.js"></script>
+    <script src="js/slides.js"></script>
+
+
+
+
+
+  </body>
+</html>

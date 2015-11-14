@@ -1,0 +1,381 @@
+html, body { height: 100%; }
+
+.slide-wrapper {
+  height: 100%;
+  position: relative;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+  width: 100%;
+}
+
+.slide-content {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.slide-current,
+.no-js .slide-content {
+  display: block;
+  overflow: visible;
+  visibility: visible;
+  z-index: 1;
+
+  @include MQ(desktop) {
+    overflow: hidden;
+  }
+}
+
+.no-js body {
+  overflow: auto;
+}
+
+.content-page-ontop {
+  z-index: 999;
+}
+
+.internal-section {
+  display: block;
+  position: absolute;
+  width: 100%;
+
+  @include MQ(desktop) {
+    display: none;
+  }
+}
+
+.divider {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 75%;
+
+  @include MQ(mobileSmallInt) {
+    width: 75%;
+  }
+
+  @include MQ(mobileLargest) {
+    width: 100%;
+  }
+}
+
+/* Shared content-page styles */
+
+.mobile-next-arrow {
+  @extend .next-arrow;
+  display: block;
+
+  @include MQ(desktop) {
+    display: none;
+  }
+}
+
+.copy {
+  padding-bottom: 100px;
+  text-align: center;
+
+  .h2 {
+    @include helveticaBold;
+    @include font-size(11px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    &.bigger {
+      @include font-size(14px);
+      line-height: 1.2em;
+    }
+  }
+
+  .desc {
+    @include helveticaRegular;
+    @include font-size(11px);
+    line-height: 1.5em;
+    padding: 0 25px 0 25px;
+  }
+}
+
+// Page Specific Styles
+.slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  //height: 0;
+
+  @include MQ(desktop) {
+    background-attachment: fixed;
+    height: 100%;
+  }
+}
+
+
+.slide-1 {
+  background-image: url('http://static.tumblr.com/niurgpz/gOOnsz4q1/mobile_ani.gif');
+  padding-top: 162.579%; /* height/width of image */
+  top: 63px;
+
+  @include MQ(desktop) {
+    background-image: none;
+    padding-top: 0;
+    top: 0;
+  }
+}
+
+.video-container {
+  display: none;
+
+  @include MQ(desktop) {
+    display: block;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    position: relative;
+  }
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#intro-vid {
+  display: none;
+
+  @include MQ(desktop) {
+    display: block;
+    height: 100%;
+  }
+}
+
+#vid-loop {
+  display: none;
+
+  @include MQ(desktop) {
+    display: block;
+    position:relative;
+    height: 100%;
+  }
+
+  @include MQ(desktopLarge) {
+    height: auto;
+  }
+}
+
+.next-arrow {
+  height: auto;
+  left: 50%;
+  margin-left: -45px;
+  margin-top: -75px;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  width: 90px;
+  z-index: 100;
+}
+
+.mobile-watch-video {
+  background-color: $black;
+  height: 50px;
+  padding-top: 15px;
+
+  @include MQ(desktop) {
+    display: none;
+  }
+
+  span {
+    color: $gray;
+    @include helveticaBold;
+    text-transform: uppercase;
+  }
+}
+
+
+
+/* Shared Styles */
+
+.clones {
+  overflow: visible;
+
+  @include MQ(desktop) {
+    overflow: hidden;
+  }
+
+  .internal-section {
+    top: 45%;
+  }
+
+  .clones-text {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .h2 {
+    @include font-size(10px);
+
+    @include MQ(mobileMedium) {
+      @include font-size(12px);
+    }
+
+    @include MQ(mobileLargest) {
+       @include font-size(16px);
+    }
+  }
+
+  .copy {
+    padding-bottom: 20px;
+
+    @include MQ(mobileSmall) {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    @include MQ(mobileMedium) {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+
+  .desc {
+    padding: 0 10% 0 10%;
+
+    @include MQ(mobileMedium) {
+      @include font-size(12px);
+    }
+
+    @include MQ(mobileLargest) {
+       @include font-size(16px);
+       padding: 0 7% 0 7%;
+    }
+  }
+
+  .btn {
+    display: block;
+    width: 200px;
+
+    @include MQ(mobileMedium) {
+      width: 235px;
+    }
+  }
+
+  .mobile-next-arrow {
+    margin-top: 110%;
+  }
+}
+
+/* NYC */
+
+.slide-1 {
+  //background-image: url('');
+  //padding-top: 303.611111%;
+
+  //@include MQ(desktop) {
+    background-image: url('../images/nyc_bw.jpg');
+    padding-top: 0;
+    overflow: hidden;
+  //}
+
+  &.slide {
+    display: none;
+    background-position: top right;
+
+    @include MQ(desktop) {
+    background-position: center right;
+    //display: block;
+  }
+
+    @include MQ(desktopMedium) {
+      // background-position: top right;
+      background-position: center right;
+    }
+  }
+
+  &.slide-current {
+    display: block;
+  }
+
+  .clones-text {
+    width: 60%;
+
+    @include MQ(mobileSmall) {
+      //width: 300px;
+    }
+
+    @include MQ(mobileSmallInt) {
+      //width: 350px;
+    }
+
+    @include MQ(mobileMedium) {
+      //width: 425px;
+    }
+
+    @include MQ(tablet) {
+      //width: 520px;
+    }
+  }
+}
+
+/* London */
+.slide-2 {
+  //background-image: url('');
+  //padding-top: 310%; /* height/width of image */
+
+  //@include MQ(desktop) {
+    background-image: url('../images/london_bw.jpg');
+    padding-top: 0;
+    overflow: hidden;
+  //}
+
+  &.slide {
+    display: none;
+    background-position: 0 0;
+
+    @include MQ(desktop) {
+    background-position: center right;
+    //display: block;
+  }
+
+    @include MQ(desktopMedium) {
+      background-position: center right;
+    }
+  }
+
+  &.slide-current {
+    display: block;
+  }
+
+  .clones-text {
+    width: 100px;
+
+    @include MQ(mobileSmallInt) {
+      //width: 350px;
+    }
+
+    @include MQ(mobileMedium) {
+      //width: 350px;
+    }
+
+    @include MQ(tablet) {
+      width: auto;
+    }
+  }
+}
+
+
+
